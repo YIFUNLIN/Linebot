@@ -4,7 +4,13 @@ WORKDIR /app
 
 COPY . .
 
-RUN apt-get update && apt-get install -y libgl1-mesa-glx
+# Install required system dependencies
+RUN apt-get update && apt-get install -y \
+    libgl1-mesa-glx \
+    libglib2.0-0 \
+    libsm6 \
+    libxext6 \
+    libxrender-dev
 
 # Set the LD_LIBRARY_PATH environment variable
 ENV LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
