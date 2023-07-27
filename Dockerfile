@@ -9,13 +9,9 @@ COPY . .
 RUN apt-get update && apt-get install -y \
     libsm6 \
     libxext6 \
-    libxrender-dev \
-    libglib2.0-0 \
-    libgl1-mesa-dev \
-    libgl1-mesa-glx \
-    libgl1
+    libxrender-dev
 
 # Install python dependencies
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt opencv-python
 
 CMD [ "python", "trash_bot.py" ]
