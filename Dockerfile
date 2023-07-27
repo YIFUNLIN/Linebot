@@ -5,6 +5,9 @@ WORKDIR /app
 
 COPY . .
 
+# Copy your model file into the Docker image
+COPY keras_model.h5 ./
+
 # Install required system dependencies
 RUN apt-get update && apt-get install -y \
     libsm6 \
