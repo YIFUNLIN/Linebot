@@ -230,5 +230,5 @@ def recognize(img):
 
 import os
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", 8080))  # 使用环境变量PORT，如果没有定义，则使用默认值5000
+    port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
