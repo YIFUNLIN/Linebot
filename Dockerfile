@@ -13,17 +13,7 @@ RUN apt-get update && apt-get install -y \
     libglib2.0-0 \
     libgl1-mesa-dev \
     libgl1-mesa-glx \
-    build-essential \
-    libssl-dev \
-    libffi-dev \
-    python3-dev \
-    curl
-
-# Download and install OpenCV
-RUN curl -O https://bootstrap.pypa.io/get-pip.py \
-    && python get-pip.py \
-    && pip install opencv-python-headless \
-    && rm get-pip.py
+    libgl1
 
 # Install python dependencies
 RUN pip install -r requirements.txt
