@@ -12,6 +12,6 @@ RUN apt-get update && apt-get install -y \
     libxrender-dev
 
 # Install python dependencies
-RUN pip install -r requirements.txt opencv-python
+RUN pip install opencv-python-headless
 
 CMD [ "python", "trash_bot.py" ]
