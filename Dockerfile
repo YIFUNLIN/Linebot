@@ -9,9 +9,10 @@ COPY . .
 RUN apt-get update && apt-get install -y \
     libsm6 \
     libxext6 \
-    libxrender-dev
+    libxrender-dev \
+    libgl1-mesa-glx
 
 # Install python dependencies
-RUN pip install opencv-python-headless
+RUN pip install -r requirements.txt
 
 CMD [ "python", "trash_bot.py" ]
