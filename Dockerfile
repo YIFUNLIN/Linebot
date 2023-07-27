@@ -10,4 +10,5 @@ RUN apt-get update && apt-get install -y libgl1
 
 COPY . .
 
-CMD [ "python", "./your_script.py" ]
+
+CMD [ "python", "trash_bot.py" ]
