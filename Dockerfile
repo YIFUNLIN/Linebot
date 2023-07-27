@@ -14,7 +14,8 @@ RUN apt-get update && apt-get install -y \
     libxext6 \
     libxrender-dev \
     libgl1-mesa-glx \
-    libgl1-mesa-dev
+    libgl1-mesa-dev && \
+    ln -s /usr/lib/x86_64-linux-gnu/libGL.so.1 /usr/lib/libGL.so.1
 
 # Install python dependencies
 RUN pip install -r requirements.txt
