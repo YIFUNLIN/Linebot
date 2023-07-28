@@ -3,4 +3,4 @@ flask
 tensorflow
 numpy
 gunicorn
-opencv-python-headless
+opencv-python==4.7.0
